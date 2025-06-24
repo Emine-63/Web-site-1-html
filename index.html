@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gökyüzüne Kodla</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Gökyüzüne Kodla</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#curriculum vitae">Cv</a></li>
+            <li><a href="#projects">Projeler</a></li>
+            <li><a href="#drawing">Çizimler</a></li>
+            <li><a href="#about">Hakkımda</a></li>
+            <li><a href="#contact">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- Ana Sayfa -->
+    <section id="home" class="hero">
+        <h1>Merhaba, ben <span class="name">Emine</span> 👋</h1>
+        <p>İHA teknolojileriyle ilgilenen, yazılım geliştiren ve hayal gücünü çizimle yansıtan bir öğrenciyim.</p>
+        <a href="#projects" class="btn">Projelerime Göz At</a>
+    </section>
+
+    <!--Cv-->
+    <section id="curriculum vitae" class="hero">
+        <h1> <a href="documents/cv.pdf" download>Cv indir (PDF)</a> </h1>
+    </section>
+
+    <!-- Genel Projeler -->
+    <section id="projects" class="projects">
+        <h2>Projelerim</h2>
+        <div class="project-cards">
+            <!-- Buraya çizim vb. projeler -->
+            <div class="card">
+                <img src="assets/drawing-project.png" alt="Teknik Resim Projesi">
+                <h3>Teknik Resim</h3>
+                <p>Yaratıcı dijital çizim çalışmaları.</p>
+            </div>
+            <div class="card">
+                <img src="assets/drawing-project.png" alt="Teknik Resim Projesi">
+                <h3>Teknik Resim</h3>
+                <p>Yaratıcı dijital çizim çalışmaları.</p>
+            </div>
+            <div class="card">
+                <img src="assets/drawing-project.png" alt="Teknik Resim Projesi">
+                <h3>Teknik Resim</h3>
+                <p>Yaratıcı dijital çizim çalışmaları.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yazılım Projeleri -->
+
+    <!-- Çizimler -->
+    <section id="drawing" class="drawings">
+        <h2>Çizimlerim</h2>
+        <div class="gallery">
+            <img src="assets/drawing1.jpg" alt="Motor Çizimi" />
+            <img src="assets/drawing2.jpg" alt="Teknik Parça Çizimi" />
+            <img src="assets/drawing3.jpg" alt="Kanat Tasarımı" />
+        </div>
+    </section>
+
+
+    <!-- Hakkımda -->
+    <section id="about" class="about">
+        <h2>Hakkımda</h2>
+        <p>Ben Emine. Yazılımla teknolojiyi, çizimle hayal gücünü birleştirmeyi seven bir geliştiriciyim.</p>
+        <p>İHA teknolojilerine, yapay zeka uygulamalarına ve kullanıcı dostu arayüz tasarımlarına ilgi duyuyorum. Aynı zamanda dijital çizimle üretkenliğimi sanatsal boyuta taşıyorum.</p>
+        <p>Frontend geliştirme, 3D modelleme ve yaratıcı proje üretimi konularında kendimi sürekli geliştiriyorum.</p>
+        <p>🚀 Hayalim: Teknolojiyle gökyüzünü kodlamak ve sınırları aşan projeler üretmek.</p>
+    </section>
+    <section id="software" class="software-section">
+        <h2>Yazılım Becerilerim</h2>
+        <div class="tech-stack">
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">React</div>
+            <div class="tech-item">Node.js</div>
+            <div class="tech-item">Python</div>
+            <div class="tech-item">SQL</div>
+            <div class="tech-item">Git & GitHub</div>
+            <div class="tech-item">C++</div>
+            <div class="tech-item">Html</div>
+
+
+    </section>
+    <section id="software" class="software-section">
+        <h3>Çizim Becerilerim</h3>
+        <div class="tech-stack">
+            <div class="tech-item">AutoCAD</div>
+            <div class="tech-item">XFLR5</div>
+            <div class="tech-item">SolidWorks</div>
+            <div class="tech-item">CATIA</div>
+        </div>
+    </section>
+
+
+    <!-- İletişim -->
+    <section id="contact" class="contact">
+        <h2>İletişim</h2>
+        <form action="https://formspree.io/f/YOURENDPOINT" method="POST">
+            <!-- 
+            Ücretsiz hesap oluştur.
+            Sana özel bir Form ID verecek (örneğin: https://formspree.io/f/mnqkrvjy)
+            Bunu formdaki action yerine yaz (YOURENDPOINT kısmı).
+            -->
+            <input type="text" name="ad" placeholder="Adınız" required />
+            <input type="email" name="email" placeholder="E-Posta" required />
+            <textarea name="mesaj" placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">Gökyüzüne Kodla</div>
+            <ul class="footer-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#drawing">Çizimler</a></li>
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="footer-socials">
+                <a href="https://github.com/kullanici-adi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.289 3.438 9.773 8.205 11.387.6.111.82-.261.82-.577v-2.234c-3.338.725-4.033-1.416-4.033-1.416-.547-1.387-1.336-1.756-1.336-1.756-1.092-.747.083-.732.083-.732 1.205.084 1.84 1.237 1.84 1.237 1.07 1.832 2.809 1.303 3.495.997.108-.775.418-1.303.762-1.603-2.665-.303-5.466-1.333-5.466-5.931 0-1.31.469-2.381 1.237-3.221-.123-.303-.536-1.522.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.654.242 2.873.12 3.176.77.84 1.236 1.911 1.236 3.221 0 4.609-2.803 5.625-5.475 5.921.43.372.823 1.103.823 2.222v3.293c0 .319.216.694.825.576C20.565 22.067 24 17.583 24 12.297 24 5.67 18.627.297 12 .297z" />
+                    </svg>
+                </a>
+
+                <a href="https://linkedin.com/in/kullanici-adi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554V9h3.414v1.561h.049c.476-.897 1.637-1.85 3.368-1.85 3.6 0 4.267 2.368 4.267 5.451v6.29zM5.337 7.433c-1.144 0-2.068-.926-2.068-2.068 0-1.143.924-2.068 2.068-2.068 1.143 0 2.068.925 2.068 2.068 0 1.142-.925 2.068-2.068 2.068zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.204 24 24 23.226 24 22.271V1.729C24 .774 23.204 0 22.225 0z" />
+                    </svg>
+                </a>
+
+                <a href="https://instagram.com/kullanici-adi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.2c3.2 0 3.584.012 4.85.07 1.366.062 2.187.293 2.698.621.59.37 1.07.85 1.44 1.44.328.511.559 1.332.621 2.698.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.293 2.187-.621 2.698-.37.59-.85 1.07-1.44 1.44-.511.328-1.332.559-2.698.621-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.187-.293-2.698-.621a3.59 3.59 0 0 1-1.44-1.44c-.328-.511-.559-1.332-.621-2.698C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.062-1.366.293-2.187.621-2.698.37-.59.85-1.07 1.44-1.44.511-.328 1.332-.559 2.698-.621C8.416 2.212 8.8 2.2 12 2.2m0-2.2C8.72 0 8.3.012 7.02.07 5.76.128 4.65.373 3.73.93 2.81 1.486 2.013 2.283 1.457 3.202.9 4.122.655 5.232.597 6.492.54 7.772.528 8.192.528 12c0 3.808.012 4.228.07 5.508.058 1.26.303 2.37.86 3.29.556.919 1.353 1.716 2.272 2.272.92.557 2.03.802 3.29.86 1.28.058 1.7.07 5.508.07s4.228-.012 5.508-.07c1.26-.058 2.37-.303 3.29-.86.919-.556 1.716-1.353 2.272-2.272.557-.92.802-2.03.86-3.29.058-1.28.07-1.7.07-5.508s-.012-4.228-.07-5.508c-.058-1.26-.303-2.37-.86-3.29a6.016 6.016 0 0 0-2.272-2.272c-.92-.557-2.03-.802-3.29-.86C15.584.012 15.2 0 12 0Z" />
+                        <path
+                            d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324Zm0 10.162a4 4 0 1 1 0-8.001 4 4 0 0 1 0 8.001Z" />
+                        <circle cx="18.406" cy="5.594" r="1.44" />
+                    </svg>
+                </a>
+
+
+            </div>
+            <p class="footer-copy">&copy; 2025 Emine. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

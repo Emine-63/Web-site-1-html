@@ -1,0 +1,614 @@
+/* Genel ayarlar */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #F2E5E5;
+    color: #2B3A55;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* Navbar */
+
+nav {
+    background: #2B3A55;
+    border-bottom: 1px solid #E8C4C4;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: padding 0.3s ease;
+}
+
+nav.scrolled {
+    padding: 0.6rem 3rem;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #F2E5E5;
+    letter-spacing: 0.05em;
+    user-select: none;
+    cursor: default;
+    font-variant: small-caps;
+}
+
+
+/* Nav linkler */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #F2E5E5;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #CE7777;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #CE7777;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+}
+
+
+/* Hamburger */
+
+.hamburger {
+    display: none;
+    width: 28px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1200;
+    transition: transform 0.3s ease;
+}
+
+.hamburger span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #F2E5E5;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    z-index: 1300;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+.hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        background: #2B3A55;
+        height: calc(100vh - 70px);
+        width: 250px;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        box-shadow: -3px 0 15px rgba(0, 0, 0, 0.1);
+        border-left: 1px solid #E8C4C4;
+        transition: right 0.3s ease;
+    }
+    .nav-links.active {
+        right: 0;
+    }
+    .nav-links a {
+        font-size: 1.2rem;
+        color: #F2E5E5;
+    }
+    .nav-links a:hover::after {
+        background: #CE7777;
+    }
+    .hamburger {
+        display: block;
+        color: #F2E5E5;
+    }
+    nav {
+        padding: 0.7rem 2rem;
+    }
+}
+
+.software-section {
+    background-color: #ffffff;
+    /* Açık, temiz bir arka plan */
+    padding: 5rem 2rem;
+    border-radius: 20px;
+    max-width: 900px;
+    margin: 20px auto 6rem;
+    text-align: center;
+    color: #2B3A55;
+}
+
+.software-section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #CE7777;
+    /* Başlıkta pembe vurgu */
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.drawings {
+    /* Çizim Becerilerim Bölümü - Ana stil */
+    background: #2B3A55;
+    /* Açık arka plan */
+    padding: 6rem 2rem 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.drawings {
+    /* Yazılım Becerilerim Bölümü - Ana stil */
+    background: #2B3A55;
+    /* Açık arka plan */
+    padding: 6rem 2rem 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    background-color: #CE7777;
+    /* Ana renk */
+    color: #F2E5E5;
+    /* Açık renk metin */
+    padding: 1rem 2.5rem;
+    border-radius: 35px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: default;
+    transition: all 0.3s ease;
+    user-select: none;
+    letter-spacing: 0.05em;
+}
+
+.tech-item:hover {
+    background-color: #F2E5E5;
+    /* Hover’da arka plan açık pembe */
+    color: #CE7777;
+    /* Yazı rengi pembe olur */
+    box-shadow: 0 12px 25px rgba(206, 119, 119, 0.55), inset 0 3px 8px rgba(206, 119, 119, 0.2);
+    transform: translateY(-5px);
+}
+
+
+/* Hero */
+
+.hero {
+    background: #F2E5E5;
+    padding: 8rem 2rem 6rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    color: #2B3A55;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero .name {
+    color: #CE7777;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: #2B3A55;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.hero .btn {
+    background-color: #CE7777;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 6px 15px rgba(206, 119, 119, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+    letter-spacing: 0.05em;
+}
+
+.hero .btn:hover,
+.hero .btn:focus {
+    background-color: #2B3A55;
+    box-shadow: 0 8px 20px rgba(43, 58, 85, 0.5);
+    transform: translateY(-3px);
+}
+
+
+/* CV İndirme Bağlantısı */
+
+.hero a[href*="cv.pdf"] {
+    color: #CE7777;
+    /* Yazı rengi */
+    font-weight: 700;
+    /* Kalın font */
+    text-decoration: none;
+    /* Alt çizgiyi kaldırır */
+    transition: color 0.3s ease;
+    /* Renk geçiş efekti */
+}
+
+.hero a[href*="cv.pdf"]:hover {
+    color: #2B3A55;
+    /* Hover rengi */
+    text-decoration: underline;
+    /* Hover'da alt çizgi ekler */
+}
+
+
+/* Projeler */
+
+.projects {
+    padding: 6rem 2rem 8rem;
+    background-color: #E8C4C4;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #2B3A55;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: #F2E5E5;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(43, 58, 85, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #2B3A55;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #2B3A55;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.card a {
+    align-self: center;
+    background: #CE7777;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 6px 14px rgba(206, 119, 119, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card a:hover {
+    background: #2B3A55;
+    box-shadow: 0 8px 22px rgba(43, 58, 85, 0.45);
+    transform: translateY(-3px);
+}
+
+.card:hover {
+    box-shadow: 0 18px 38px rgba(43, 58, 85, 0.15);
+    transform: translateY(-8px);
+}
+
+
+/* Çizimler */
+
+.drawings {
+    padding: 6rem 2rem 8rem;
+    background: #F2E5E5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.drawings h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #2B3A55;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(43, 58, 85, 0.07);
+    cursor: pointer;
+    transition: transform 0.35s ease;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+.gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 38px rgba(43, 58, 85, 0.18);
+}
+
+
+/* Hakkımda */
+
+.about {
+    padding: 6rem 2rem 8rem;
+    background: #f4f1f1;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2B3A55;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 1.6rem;
+    color: #2B3A55;
+    font-weight: 500;
+}
+
+
+/* İletişim */
+
+.contact {
+    padding: 6rem 2rem 8rem;
+    background: #F2E5E5;
+    max-width: 600px;
+    margin: 0 auto 6rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.contact h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    color: #2B3A55;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+input,
+textarea {
+    padding: 1rem 1.2rem;
+    border: 2px solid #CE7777;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2B3A55;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2B3A55;
+    outline: none;
+    box-shadow: 0 0 8px rgba(43, 58, 85, 0.4);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+button {
+    background-color: #CE7777;
+    color: white;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(206, 119, 119, 0.35);
+    transition: all 0.4s ease;
+    animation: pulse 2.5s infinite ease-in-out;
+}
+
+button:hover {
+    background-color: #2B3A55;
+    box-shadow: 0 12px 30px rgba(43, 58, 85, 0.4);
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: #2B3A55;
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    color: #F2E5E5;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #F2E5E5;
+    font-variant: small-caps;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #E8C4C4;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-socials img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.15);
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #E8C4C4;
+}
