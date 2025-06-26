@@ -14,8 +14,12 @@
 
 # Kullanılan Teknolojiler
    -**HTML5 & CSS3**: Temel yapı ve stil.
+   
    -**JavaScript (ES6+)**: Dinamik işlevsellik.
+   
    -**React.js**: Bileşen tabanlı yapı.
+   
    -**TailwindCSS**: Hızlı ve modüler tasarım.
+   
    -**Netlify**: Hosting ve CI/CD
 
