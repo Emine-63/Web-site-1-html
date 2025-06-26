@@ -3,9 +3,13 @@
    
 # Öne Çıkan Özzellikler
    -**Duyarlı Tasarım**: Mobil , tablet ve masaüstü cihazlarda kusursuz görüntüleme.
-   -**Modern Arayüz**: Minimalist ve kullaıcı dostu UI/UX tasarımı,
+   
+   -**Modern Arayüz**: Minimalist ve kullaıcı dostu UI/UX tasarımı.
+   
    -**Proje Galerisi**: Yaptığım projeleri kartlar halinde sunan interaktif bir bölüm.
+   
    -**Canlı Demo Linkleri**: Her proejeye ait canlı demolar ve GitHub repo bağlantıları.
+   
    -**Dark/Light Mode**: Kullanıcı arayüzüne göre tema değiştirme desteği.
 
 # Kullanılan Teknolojiler
